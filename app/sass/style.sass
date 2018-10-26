@@ -1,0 +1,97 @@
+@import "fonts.sass"
+
+$color-grey : #F6F6F6
+$color-green : #7cf927
+$color-green-darken: darken($color-green, 20%)
+$header-height: 80px
+$main-font: Arial
+
+*
+  padding: 0
+  margin: 0
+a
+  text-decoration: none
+  display: block
+  color: $color-green
+header
+  display: block
+  background-color: $color-grey
+  width: 100%
+  height: $header-height
+  display: grid
+  grid-template-columns: 30% 70%
+  grid-template-areas: "logo menu"
+  position: fixed
+  .logo
+    margin-top: 20px
+    margin-left: 150px
+    grid-area: logo
+    // border: 1px solid green
+    a
+      text-transform: uppercase
+      font-family: Amsterdam
+      font-size: 30px
+      color: $color-green
+  .menu
+    // border: 2px solid red
+    grid-area: menu
+    ul
+      justify-content: flex-end
+      display: flex
+      list-style: none
+      font-family: $main-font
+      height: 100%
+      font-size: 20px
+      color: $color-green
+      li
+        display: inline-block
+        margin-left: 10px
+        margin-right: 10px
+        height: 100%
+        a
+          margin-top: 30px
+      li:nth-child(4)
+        margin-right: 5%
+      li:hover
+        cursor: pointer
+        border-bottom: 1px solid $color-green-darken
+        a
+          color: $color-green-darken
+
+
+
+
+
+.name
+  padding-top: calc(#{$header-height} + 100px)
+  width: 100%
+  height: 200px
+  // border: 1px solid blue
+  p
+  font-size: 80px
+  color: $color-green
+  text-align: center
+  font-family: $main-font
+
+
+
+
+.price
+  display: flex
+  flex-direction: row
+  justify-content: space-around
+  width: 100%
+  height: auto
+
+
+  .choice1, .choice2, .choice3
+    height: 500px
+    width: 20%
+    border: 1px solid $color-green
+  // grid-template-columns:
+  // .choice1
+  //   grid-area: choice1
+  // .choice2
+  //   grid-area: choice2
+  // .choice3
+  //   grid-area: choice3
